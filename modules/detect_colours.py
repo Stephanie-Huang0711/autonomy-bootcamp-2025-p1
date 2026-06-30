@@ -8,10 +8,6 @@ from pathlib import Path
 import cv2
 import numpy as np
 
-# Bootcampers remove the following lines:
-# Allow linters and formatters to pass for bootcamp maintainers
-# pylint: disable=unused-argument,unused-variable,used-before-assignment
-
 
 class DetectBlue:
     """
@@ -54,7 +50,7 @@ class DetectBlue:
         # Set upper and lower bounds for colour detection, this is in HSV
         # note hue, saturation, value format
         lower_blue = np.array([100, 150, 50])
-        upper_blue = np.array([130, 255, 255])
+        upper_blue = np.array([150, 255, 255])
 
         # Apply the threshold for the colour detection
         mask = cv2.inRange(hsv, lower_blue, upper_blue)
